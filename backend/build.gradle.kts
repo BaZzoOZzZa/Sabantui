@@ -1,3 +1,4 @@
+
 plugins {
     alias(libs.plugins.kotlin.jvm)
 }
@@ -7,12 +8,20 @@ allprojects {
         mavenCentral()
     }
 }
+group = "ru.bazzoozza"
 
 subprojects {
-    apply(plugin = libs.plugins.kotlin.jvm.get().pluginId)
+    apply(plugin = rootProject.libs.plugins.kotlin.jvm.get().pluginId)
 
     dependencies {
         implementation(kotlin("stdlib"))
+        testImplementation(rootProject.libs.kotest.runner)
+        testImplementation(rootProject.libs.kotest.assertions)
+        testImplementation(rootProject.libs.kotest.framework)
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
     }
 
     kotlin {
