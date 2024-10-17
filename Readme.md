@@ -13,11 +13,11 @@
 
 ### Серверная часть (Backend)
 
-- **Язык программирования**: Go (Golang)
-- **Веб-фреймворк**: Gin Gonic или Echo
-- **WebSocket**: Gorilla WebSocket
-- **OAuth2**: Osin
-- **ORM**: GORM или Ent
+- **Язык программирования**: Kotlin
+- **Веб-фреймворк**: Spring
+- **WebSocket**: Spring flux
+- **OAuth2**: Spring security
+- **ORM**: Spring jpa
 - **Базы данных**:
   - PostgreSQL
   - Redis (для кэширования и сессий)
@@ -45,7 +45,7 @@
 
 - **Сервер**:
 
-  - Go 1.2+ или выше
+  - Jre 21 или выше
   - Docker и Docker Compose
   - PostgreSQL
   - Redis
